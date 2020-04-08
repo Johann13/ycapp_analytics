@@ -5,6 +5,8 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 
+import com.google.firebase.analytics.FirebaseAnalytics;
+
 import java.util.Map;
 
 import io.flutter.embedding.engine.plugins.FlutterPlugin;
@@ -54,6 +56,16 @@ public class YcappanalyticsPlugin implements FlutterPlugin, MethodCallHandler {
                 AnalyticsHelper.log(context, eventName, parameterBundle);
 
                 result.success(null);
+                break;
+            case "enable":
+                if (call.hasArgument("enable")) {
+                    boolean enable = call.argument("enable");
+                    FirebaseAnalytics firebaseAnalytics = FirebaseAnalytics.getInstance(context);
+                    firebaseAnalytics.setAnalyticsCollectionEnabled(enable);
+                    result.success(true);
+                } else {
+                    result.success(false);
+                }
                 break;
             default:
                 result.notImplemented();

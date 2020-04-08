@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3fbb1406-c6ba-40d1-bf2a-c194a0ed4ce1" name="Default Changelist" comment="" />
+    <list default="true" id="3fbb1406-c6ba-40d1-bf2a-c194a0ed4ce1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/feser/ycappanalytics/YcappanalyticsPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/feser/ycappanalytics/YcappanalyticsPlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ycapp_analytics.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ycapp_analytics.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ycapp_analytics_web.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ycapp_analytics_web.dart" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -9,10 +14,15 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_3a_API_29" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1aGp5asQuQlW0CBXypM57v0j6y1" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ycapp_connectivity/ycapp_connectivity" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
@@ -45,5 +55,18 @@
       <updated>1586371602711</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

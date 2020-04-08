@@ -9,5 +9,12 @@ class YAnalyticsWebPlugin extends YAnalyticsPlatform {
 
   Future<void> log(String name, {Map<String, dynamic> parameters}) {
     analytics().logEvent(name, parameters);
+    return null;
+  }
+
+  @override
+  Future<void> enable(bool enable) {
+    analytics().setAnalyticsCollectionEnabled(enable);
+    return null;
   }
 }
