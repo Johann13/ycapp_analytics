@@ -2,10 +2,15 @@ package com.feser.ycappanalytics;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.analytics.FirebaseAnalytics;
+import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.iid.InstanceIdResult;
 
 import java.util.Map;
 
@@ -43,8 +48,28 @@ public class YcappanalyticsPlugin implements FlutterPlugin, MethodCallHandler {
     }
 
     @Override
-    public void onMethodCall(@NonNull MethodCall call, @NonNull Result result) {
+    public void onMethodCall(@NonNull MethodCall call, @NonNull final Result result) {
         switch (call.method) {
+            case "user":
+                UserWorker.enqueue(context);
+                result.success(null);
+            case "getId":
+                FirebaseInstanceId.getInstance().getInstanceId()
+                        .addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                result.error("s1", "s2", e);
+                            }
+                        })
+                        .addOnSuccessListener(new OnSuccessListener<InstanceIdResult>() {
+                            @Override
+                            public void onSuccess(InstanceIdResult instanceIdResult) {
+                                Log.d("getInstanceId Token", instanceIdResult.getToken());
+                                Log.d("getInstanceId Id", instanceIdResult.getId());
+                                result.success(instanceIdResult.getId());
+                            }
+                        });
+                break;
             case "log":
                 @SuppressWarnings("unchecked")
                 Map<String, Object> arguments = (Map<String, Object>) call.arguments;

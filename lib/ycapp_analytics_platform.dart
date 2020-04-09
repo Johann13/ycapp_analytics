@@ -13,11 +13,23 @@ abstract class YAnalyticsPlatform extends PlatformInterface {
     _instance = instance;
   }
 
+  Future<String> getId() {
+    throw UnimplementedError('id');
+  }
+
   Future<void> log(String name, {Map<String, dynamic> parameters}) {
     throw UnimplementedError('log');
   }
 
   Future<void> enable(bool enable) {
     throw UnimplementedError('enable');
+  }
+
+  Future<void> user() {
+    throw UnimplementedError('');
+  }
+
+  Future<void> logUserSub(int hours) {
+    throw UnimplementedError('');
   }
 }

@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3fbb1406-c6ba-40d1-bf2a-c194a0ed4ce1" name="Default Changelist" comment="" />
+    <list default="true" id="3fbb1406-c6ba-40d1-bf2a-c194a0ed4ce1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/android/src/main/java/com/feser/ycappanalytics/UserWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/feser/ycappanalytics/YcappanalyticsPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/feser/ycappanalytics/YcappanalyticsPlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/method_channel_ycapp_analytics.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/method_channel_ycapp_analytics.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ycapp_analytics.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ycapp_analytics.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ycapp_analytics_platform.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ycapp_analytics_platform.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ycapp_analytics_web.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ycapp_analytics_web.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,7 +27,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ycapp_messaging" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
