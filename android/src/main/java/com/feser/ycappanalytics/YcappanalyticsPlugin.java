@@ -56,20 +56,7 @@ public class YcappanalyticsPlugin implements FlutterPlugin, MethodCallHandler {
                 UserWorker.enqueue(context);
                 result.success(null);
             case "getId":
-                FirebaseInstanceId.getInstance()
-                        .getInstanceId()
-                        .addOnCompleteListener(
-                                new OnCompleteListener<InstanceIdResult>() {
-                                    @Override
-                                    public void onComplete(@NonNull Task<InstanceIdResult> task) {
-                                        if (!task.isSuccessful()) {
-                                            result.success(null);
-                                            return;
-                                        }
-
-                                        result.success(task.getResult().getToken());
-                                    }
-                                });
+                result.success(FirebaseInstanceId.getInstance().getId());
                 break;
             case "log":
                 @SuppressWarnings("unchecked")
