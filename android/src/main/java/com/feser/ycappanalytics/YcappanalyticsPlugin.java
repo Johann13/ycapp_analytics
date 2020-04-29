@@ -54,21 +54,20 @@ public class YcappanalyticsPlugin implements FlutterPlugin, MethodCallHandler {
                 UserWorker.enqueue(context);
                 result.success(null);
             case "getId":
-                FirebaseInstanceId.getInstance().getInstanceId()
-                        .addOnFailureListener(new OnFailureListener() {
-                            @Override
-                            public void onFailure(@NonNull Exception e) {
-                                result.error("s1", "s2", e);
-                            }
-                        })
-                        .addOnSuccessListener(new OnSuccessListener<InstanceIdResult>() {
-                            @Override
-                            public void onSuccess(InstanceIdResult instanceIdResult) {
-                                Log.d("getInstanceId Token", instanceIdResult.getToken());
-                                Log.d("getInstanceId Id", instanceIdResult.getId());
-                                result.success(instanceIdResult.getId());
-                            }
-                        });
+                FirebaseInstanceId.getInstance()
+                        .getInstanceId()
+                        .addOnCompleteListener(
+                                new OnCompleteListener<InstanceIdResult>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<InstanceIdResult> task) {
+                                        if (!task.isSuccessful()) {
+                                            result.success(null);
+                                            return;
+                                        }
+
+                                        result.success(task.getResult().getToken());
+                                    }
+                                });
                 break;
             case "log":
                 @SuppressWarnings("unchecked")
