@@ -22,8 +22,8 @@ class MethodChannelYAnalytics extends YAnalyticsPlatform {
   }
 
   @override
-  Future<void> enable(bool enable) {
-    return _channel.invokeListMethod('enable', {'enable': enable});
+  Future<bool> enable(bool enable) {
+    return _channel.invokeMethod('enable', {'enable': enable});
   }
 
   Future<void> user() {
