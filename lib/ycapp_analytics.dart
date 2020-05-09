@@ -17,7 +17,7 @@ class YAnalytics {
     );
   }
 
-  static Future<void> enable(bool enable) {
+  static Future<bool> enable(bool enable) {
     return YAnalyticsPlatform.instance.enable(enable);
   }
 

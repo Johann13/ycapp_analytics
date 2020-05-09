@@ -21,7 +21,7 @@ abstract class YAnalyticsPlatform extends PlatformInterface {
     throw UnimplementedError('log');
   }
 
-  Future<void> enable(bool enable) {
+  Future<bool> enable(bool enable) {
     throw UnimplementedError('enable');
   }
 
