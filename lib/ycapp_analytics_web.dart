@@ -16,7 +16,7 @@ class YAnalyticsWebPlugin extends YAnalyticsPlatform {
   }
 
   @override
-  Future<bool> enable(bool enable) {
+  Future<bool> enable(bool enable) async {
     analytics().setAnalyticsCollectionEnabled(enable);
     return true;
   }
