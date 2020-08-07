@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3fbb1406-c6ba-40d1-bf2a-c194a0ed4ce1" name="Default Changelist" comment="" />
+    <list default="true" id="3fbb1406-c6ba-40d1-bf2a-c194a0ed4ce1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="9262aaa" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_3a_API_29" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -55,6 +59,10 @@
       <workItem from="1588095841399" duration="114000" />
       <workItem from="1588099332452" duration="1252000" />
       <workItem from="1588175131609" duration="313000" />
+      <workItem from="1589720917591" duration="147000" />
+      <workItem from="1589725573368" duration="1142000" />
+      <workItem from="1589730588291" duration="749000" />
+      <workItem from="1590084896106" duration="55000" />
     </task>
     <servers />
   </component>
