@@ -33,13 +33,11 @@ public class YcappanalyticsPlugin implements FlutterPlugin, MethodCallHandler {
     /// when the Flutter Engine is detached from the Activity
     private MethodChannel channel;
     private Context context;
-
-    public YcappanalyticsPlugin(Context context) {
-        this.context = context;
-    }
+    public YcappanalyticsPlugin(){}
 
     @Override
     public void onAttachedToEngine(@NonNull FlutterPluginBinding flutterPluginBinding) {
+        context = binding.getApplicationContext();
         channel = new MethodChannel(flutterPluginBinding.getBinaryMessenger(), "ycappanalytics");
         channel.setMethodCallHandler(new YcappanalyticsPlugin(flutterPluginBinding.getApplicationContext()));
     }
@@ -53,7 +51,9 @@ public class YcappanalyticsPlugin implements FlutterPlugin, MethodCallHandler {
     public void onMethodCall(@NonNull MethodCall call, @NonNull final Result result) {
         switch (call.method) {
             case "user":
-                UserWorker.enqueue(context);
+                if(context!=null) {
+                    UserWorker.enqueue(context);
+                }
                 result.success(null);
             case "getId":
                 result.success(FirebaseInstanceId.getInstance().getId());
@@ -65,8 +65,9 @@ public class YcappanalyticsPlugin implements FlutterPlugin, MethodCallHandler {
 
                 @SuppressWarnings("unchecked") final Bundle parameterBundle =
                         createBundleFromMap((Map<String, Object>) arguments.get("parameters"));
-
-                AnalyticsHelper.log(context, eventName, parameterBundle);
+                if(context!=null) {
+                    AnalyticsHelper.log(context, eventName, parameterBundle);
+                }
 
                 result.success(null);
                 break;
