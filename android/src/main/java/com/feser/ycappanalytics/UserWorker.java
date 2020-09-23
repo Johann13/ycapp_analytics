@@ -17,11 +17,11 @@ import com.google.gson.Gson;
 import java.util.List;
 import java.util.Locale;
 
-import okhttp3.MediaType;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.RequestBody;
-import okhttp3.Response;
+import com.squareup.okhttp3.MediaType;
+import com.squareup.okhttp3.OkHttpClient;
+import com.squareup.okhttp3.Request;
+import com.squareup.okhttp3.RequestBody;
+import com.squareup.okhttp3.Response;
 
 public class UserWorker extends Worker {
 
