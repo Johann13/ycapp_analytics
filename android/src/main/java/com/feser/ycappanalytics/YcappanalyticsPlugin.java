@@ -37,7 +37,7 @@ public class YcappanalyticsPlugin implements FlutterPlugin, MethodCallHandler {
 
     @Override
     public void onAttachedToEngine(@NonNull FlutterPluginBinding flutterPluginBinding) {
-        context = binding.getApplicationContext();
+        context = flutterPluginBinding.getApplicationContext();
         channel = new MethodChannel(flutterPluginBinding.getBinaryMessenger(), "ycappanalytics");
         channel.setMethodCallHandler(new YcappanalyticsPlugin(flutterPluginBinding.getApplicationContext()));
     }
