@@ -33,25 +33,24 @@ public class YcappanalyticsPlugin implements FlutterPlugin, MethodCallHandler {
     /// when the Flutter Engine is detached from the Activity
     private MethodChannel channel;
     private Context context;
-    public YcappanalyticsPlugin(){}
+
+
+    private static void setup(YcappanalyticsPlugin plugin, FlutterPluginBinding flutterPluginBinding) {
+        plugin.channel = new MethodChannel(flutterPluginBinding.getBinaryMessenger(), "ycappanalytics");
+        plugin.context = flutterPluginBinding.getApplicationContext();
+        plugin.channel.setMethodCallHandler(plugin);
+    }
 
     @Override
     public void onAttachedToEngine(@NonNull FlutterPluginBinding flutterPluginBinding) {
-        context = flutterPluginBinding.getApplicationContext();
-        channel = new MethodChannel(flutterPluginBinding.getBinaryMessenger(), "ycappanalytics");
-        channel.setMethodCallHandler(new YcappanalyticsPlugin());
-    }
-
-    public static void registerWith(Registrar registrar) {
-        final MethodChannel channel = new MethodChannel(registrar.messenger(), "ycappanalytics");
-        channel.setMethodCallHandler(new YcappanalyticsPlugin(registrar.context()));
+        setup(this, flutterPluginBinding);
     }
 
     @Override
     public void onMethodCall(@NonNull MethodCall call, @NonNull final Result result) {
         switch (call.method) {
             case "user":
-                if(context!=null) {
+                if (context != null) {
                     UserWorker.enqueue(context);
                 }
                 result.success(null);
@@ -65,7 +64,7 @@ public class YcappanalyticsPlugin implements FlutterPlugin, MethodCallHandler {
 
                 @SuppressWarnings("unchecked") final Bundle parameterBundle =
                         createBundleFromMap((Map<String, Object>) arguments.get("parameters"));
-                if(context!=null) {
+                if (context != null) {
                     AnalyticsHelper.log(context, eventName, parameterBundle);
                 }
 
