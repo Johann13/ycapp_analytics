@@ -43,7 +43,6 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -54,7 +53,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ycapp_messaging" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
@@ -62,6 +61,19 @@
       <recent name="C:\Projects\ycapp_analytics\android\src\main\java\com\feser\ycappanalytics" />
       <recent name="C:\Projects\ycapp_analytics\ycapp_analytics\lib" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -83,6 +95,7 @@
       <workItem from="1590084896106" duration="55000" />
       <workItem from="1599573027212" duration="1758000" />
       <workItem from="1600869124541" duration="172000" />
+      <workItem from="1600894987737" duration="64000" />
     </task>
     <servers />
   </component>
@@ -100,5 +113,11 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="411" y="95" key="FileChooserDialogImpl" timestamp="1600891986887">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="411" y="95" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1600891986887" />
   </component>
 </project>
