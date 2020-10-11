@@ -1,18 +1,18 @@
 <component name="libraryTable">
-  <library name="Flutter Plugins" type="FlutterPluginsLibraryType">
+  <library name="Flutter Plugins">
     <CLASSES>
       <root url="file://$PROJECT_DIR$/../../../flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.5.0" />
       <root url="file://$PROJECT_DIR$/../../../flutter/.pub-cache/hosted/pub.dartlang.org/firebase_analytics-6.0.0" />
       <root url="file://$PROJECT_DIR$/../../../flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences-0.5.10" />
-      <root url="file://$PROJECT_DIR$/../../../flutter/.pub-cache/git/ycapp_foundation-cb3d21e5bb22eabf0d87e595c4ae2252455041da" />
       <root url="file://$PROJECT_DIR$/../../../flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_linux-0.0.1+2" />
       <root url="file://$PROJECT_DIR$/../../../flutter/.pub-cache/hosted/pub.dartlang.org/firebase_analytics_web-0.1.1" />
       <root url="file://$PROJECT_DIR$/../../../flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core_web-0.2.0" />
       <root url="file://$PROJECT_DIR$" />
-      <root url="file://$PROJECT_DIR$/../../../flutter/.pub-cache/git/ycapp_connectivity-dd02b09ea407baa989946d35115e3ad0ef4db7ef" />
       <root url="file://$PROJECT_DIR$/../../../flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_web-0.1.2+7" />
       <root url="file://$PROJECT_DIR$/../../../flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-7.0.0" />
       <root url="file://$PROJECT_DIR$/../../../flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_linux-0.0.2+2" />
+      <root url="file://$PROJECT_DIR$/../ycapp_foundation" />
+      <root url="file://$PROJECT_DIR$/../ycapp_connectivity" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
