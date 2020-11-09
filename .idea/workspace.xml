@@ -62,19 +62,6 @@
       <recent name="C:\Projects\ycapp_analytics\ycapp_analytics\lib" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
@@ -96,6 +83,8 @@
       <workItem from="1599573027212" duration="1758000" />
       <workItem from="1600869124541" duration="172000" />
       <workItem from="1600894987737" duration="64000" />
+      <workItem from="1604610345276" duration="127000" />
+      <workItem from="1604937508289" duration="866000" />
     </task>
     <servers />
   </component>

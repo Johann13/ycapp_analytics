@@ -1,31 +1,32 @@
 import 'dart:async';
 
-import 'package:ycapp_analytics/ycapp_analytics_platform.dart';
+import 'package:firebase_analytics/firebase_analytics.dart';
 
 class YAnalytics {
+  static FirebaseAnalytics _analytics = FirebaseAnalytics();
+
+  /*
   static Future<String> getId() {
-    return YAnalyticsPlatform.instance.getId();
-  }
+    _analytics.
+  }*/
 
   static Future<void> log(
     String name, {
     Map<String, dynamic> parameters,
   }) async {
-    return YAnalyticsPlatform.instance.log(
-      name,
-      parameters: parameters,
-    );
+    return _analytics.logEvent(name: name, parameters: parameters);
   }
 
-  static Future<bool> enable(bool enable) {
-    return YAnalyticsPlatform.instance.enable(enable);
+  static Future<void> enable(bool enable) {
+    return _analytics.setAnalyticsCollectionEnabled(enable);
   }
 
+  /*
   static Future<void> user() async {
     return YAnalyticsPlatform.instance.user();
   }
 
   static Future<void> logUserSub(int hours) async {
     return YAnalyticsPlatform.instance.logUserSub(hours);
-  }
+  }*/
 }
