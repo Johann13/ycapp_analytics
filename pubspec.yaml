@@ -20,9 +20,14 @@ dependencies:
   firebase: ^7.3.0
 
   ycapp_foundation:
-    path: ../ycapp_foundation
+    #  path: ../ycapp_foundation
+    git:
+      url: git://github.com/Johann13/ycapp_foundation.git
   ycapp_connectivity:
-    path: ../ycapp_connectivity
+  #  path: ../ycapp_connectivity
+    git:
+      url: git://github.com/Johann13/ycapp_connectivity.git
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
