@@ -15,9 +15,10 @@ dependencies:
     sdk: flutter
   firebase_analytics: ^6.2.0
 
-
   ycapp_foundation:
-    path: ../ycapp_foundation
+    #  path: ../ycapp_foundation
+    git:
+      url: git://github.com/Johann13/ycapp_foundation.git
 
 dev_dependencies:
   flutter_test:
