@@ -39,4 +39,6 @@ dependencies {
     implementation 'com.squareup.okhttp3:okhttp:4.9.0'
     implementation 'androidx.work:work-runtime:2.3.4'
     implementation 'com.google.code.gson:gson:2.8.6'
+    def work_version = "2.4.0"
+    implementation "androidx.work:work-runtime:$work_version"
 }
