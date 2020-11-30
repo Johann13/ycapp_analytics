@@ -1,6 +1,6 @@
 import 'package:flutter/services.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:ycapp_analytics/ycapp_analytics_platform.dart';
-import 'package:ycapp_foundation/prefs/prefs.dart';
 
 class MethodChannelYAnalytics extends YAnalyticsPlatform {
   static const MethodChannel _channel = const MethodChannel('ycappanalytics');
@@ -31,15 +31,15 @@ class MethodChannelYAnalytics extends YAnalyticsPlatform {
   }
 
   Future<void> logUserSub(int hours) async {
-    int lastUserLog = await Prefs.getInt('lastUserLog',
-        DateTime.now().subtract(Duration(days: 7)).millisecondsSinceEpoch);
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    int lastUserLog = await prefs.getInt('lastUserLog') ??
+        DateTime.now().subtract(Duration(days: 7)).millisecondsSinceEpoch;
     DateTime now = DateTime.now();
     DateTime lastLogDate = DateTime.fromMillisecondsSinceEpoch(lastUserLog);
     Duration duration = now.difference(lastLogDate);
     if (duration.inHours >= hours) {
       await user();
-      await Prefs.setInt('lastUserLog', now.millisecondsSinceEpoch);
+      await prefs.setInt('lastUserLog', now.millisecondsSinceEpoch);
     }
   }
-
 }

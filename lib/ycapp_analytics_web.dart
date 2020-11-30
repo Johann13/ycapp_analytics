@@ -1,9 +1,10 @@
+import 'dart:html' as html;
+
 import 'package:firebase/firebase.dart';
 import 'package:flutter_web_plugins/flutter_web_plugins.dart';
-import 'package:ycapp_analytics/ycapp_analytics_platform.dart';
-import 'package:ycapp_foundation/prefs/prefs.dart';
 import 'package:http/http.dart' as http;
-import 'dart:html' as html;
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:ycapp_analytics/ycapp_analytics_platform.dart';
 
 class YAnalyticsWebPlugin extends YAnalyticsPlatform {
   static void registerWith(Registrar registrar) {
@@ -21,15 +22,15 @@ class YAnalyticsWebPlugin extends YAnalyticsPlatform {
     return true;
   }
 
-
   Future<void> user() async {
     String url =
         'https://europe-west1-yogscastapp-7e6f0.cloudfunctions.net/userAccessData/user';
     String id = await getId();
-    List<String> creator = await Prefs.getStringList('creatorSubscriptions');
-    List<String> twitch = await Prefs.getStringList('twitchSubscriptions');
-    List<String> youtube = await Prefs.getStringList('youtubeSubscriptions');
-    Map<String, dynamic> data = {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    List<String> creator = await prefs.getStringList('creatorSubscriptions');
+    List<String> twitch = await prefs.getStringList('twitchSubscriptions');
+    List<String> youtube = await prefs.getStringList('youtubeSubscriptions');
+    Map<String, dynamic> data = <String, dynamic>{
       'id': id,
       'creator': creator,
       'twitch': twitch,
@@ -48,14 +49,16 @@ class YAnalyticsWebPlugin extends YAnalyticsPlatform {
   }
 
   Future<void> logUserSub(int hours) async {
-    int lastUserLog = await Prefs.getInt('lastUserLog',
-        DateTime.now().subtract(Duration(days: 7)).millisecondsSinceEpoch);
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+
+    int lastUserLog = await prefs.getInt('lastUserLog') ??
+        DateTime.now().subtract(Duration(days: 7)).millisecondsSinceEpoch;
     DateTime now = DateTime.now();
     DateTime lastLogDate = DateTime.fromMillisecondsSinceEpoch(lastUserLog);
     Duration duration = now.difference(lastLogDate);
     if (duration.inHours >= hours) {
       await user();
-      await Prefs.setInt('lastUserLog', now.millisecondsSinceEpoch);
+      await prefs.setInt('lastUserLog', now.millisecondsSinceEpoch);
     }
   }
 
