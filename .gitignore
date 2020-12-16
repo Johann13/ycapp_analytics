@@ -20,7 +20,3 @@ doc/api/
 *.js.deps
 *.js.map
 .idea/
-.idea/workspace.xml
-.idea/workspace.xml
-.idea/workspace.xml
-.idea/libraries/Flutter_Plugins.xml
