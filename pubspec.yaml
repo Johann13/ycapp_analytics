@@ -20,7 +20,7 @@ dependencies:
       url: git://github.com/Johann13/ycapp_foundation.git
 
   http: ^0.12.0+4
-  firebase_analytics: ^6.2.0
+
   plugin_platform_interface: ^1.0.2
   firebase_messaging: ^8.0.0-dev.9
   firebase: ^7.3.0
