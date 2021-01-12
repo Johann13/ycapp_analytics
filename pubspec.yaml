@@ -13,18 +13,22 @@ dependencies:
     sdk: flutter
   flutter_web_plugins:
     sdk: flutter
-  firebase_analytics: ^7.0.0
+  http: ^0.12.0+4
+  firebase_analytics: ^6.2.0
+  plugin_platform_interface: ^1.0.2
+  firebase_messaging: ^8.0.0-dev.9
+  firebase: ^7.3.0
+  shared_preferences: ^0.5.12+4
+
   ycapp_foundation:
     path: ../ycapp_foundation
     #git:
     #  url: git://github.com/Johann13/ycapp_foundation.git
 
-  http: ^0.12.2
-
-  #plugin_platform_interface: ^1.0.3
-  firebase_messaging: ^8.0.0-dev.12
-  #firebase: ^8.0.0
-  shared_preferences: ^0.5.12+4
+  ycapp_connectivity:
+  #  path: ../ycapp_connectivity
+    git:
+      url: git://github.com/Johann13/ycapp_connectivity.git
 
 dev_dependencies:
   flutter_test:
@@ -35,8 +39,20 @@ dev_dependencies:
 
 # The following section is specific to Flutter.
 flutter:
-
-
+  # This section identifies this Flutter project as a plugin project.
+  # The 'pluginClass' and Android 'package' identifiers should not ordinarily
+  # be modified. They are used by the tooling to maintain consistency when
+  # adding or updating assets for this project.
+  plugin:
+    platforms:
+      android:
+        package: com.feser.ycappanalytics
+        pluginClass: YcappanalyticsPlugin
+      ios:
+        pluginClass: YcappanalyticsPlugin
+      web:
+        pluginClass: YAnalyticsWebPlugin
+        fileName: ycapp_analytics_web.dart
   # To add assets to your plugin package, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
