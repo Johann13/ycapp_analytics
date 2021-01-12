@@ -1,5 +1,6 @@
 # This is a generated file; do not edit or check into version control.
-ycapp_foundation=/Users/johannfeser/Projects/YcApp/ycapp_foundation/
+ycapp_analytics=/Users/johannfeser/Projects/YcApp/ycapp_analytics/
+ycapp_foundation=/Users/johannfeser/flutter/.pub-cache/git/ycapp_foundation-048408e46a9941287b7702e9f62d1c0d9b019f43/
 cloud_firestore=/Users/johannfeser/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore-0.15.0/
 cloud_firestore_web=/Users/johannfeser/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore_web-0.3.0/
 firebase_analytics=/Users/johannfeser/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_analytics-7.0.0/

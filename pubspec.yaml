@@ -13,22 +13,15 @@ dependencies:
     sdk: flutter
   flutter_web_plugins:
     sdk: flutter
-  http: ^0.12.0+4
-  firebase_analytics: ^6.2.0
-  plugin_platform_interface: ^1.0.2
-  firebase_messaging: ^8.0.0-dev.9
-  firebase: ^7.3.0
+  http: ^0.12.2
+  firebase_analytics: ^7.0.0
+  firebase_messaging: ^8.0.0-dev.12
   shared_preferences: ^0.5.12+4
 
   ycapp_foundation:
-    path: ../ycapp_foundation
-    #git:
-    #  url: git://github.com/Johann13/ycapp_foundation.git
-
-  ycapp_connectivity:
-  #  path: ../ycapp_connectivity
+    #path: ../ycapp_foundation
     git:
-      url: git://github.com/Johann13/ycapp_connectivity.git
+      url: git://github.com/Johann13/ycapp_foundation.git
 
 dev_dependencies:
   flutter_test:
